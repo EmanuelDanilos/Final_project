@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Test;
 
 /**
@@ -18,7 +19,11 @@ public class AppTest
         assertTrue( true );
 
         System.setProperty("webdriver.chrome.driver","D:\\Kurs\\chromedriver.exe");
-        ChromeDriver driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+
+        ChromeDriver driver = new ChromeDriver(options);
         driver.get("http://www.google.com");
         driver.quit();
     }
