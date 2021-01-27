@@ -17,8 +17,7 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
-
-        System.setProperty("webdriver.chrome.driver","D:\\Kurs\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","D:\\Kurs\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
