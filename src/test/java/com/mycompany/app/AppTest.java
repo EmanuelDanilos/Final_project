@@ -1,6 +1,9 @@
 package com.mycompany.app;
 
 import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.Test;
@@ -23,7 +26,9 @@ public class AppTest
         options.setHeadless(true);
 
         ChromeDriver driver = new ChromeDriver(options);
-        driver.get("http://www.google.com");
+        driver.get("http://www.example.com");
+        WebElement element = driver.findElement(By.linkText("More information..."));
+        element.click();
         driver.quit();
     }
 }
