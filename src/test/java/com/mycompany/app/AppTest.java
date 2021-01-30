@@ -24,12 +24,12 @@ public class AppTest
     public void LogInAndLogOut()
     {
         assertTrue( true );
-        System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
         ChromeDriver driver = new ChromeDriver(options);
         options.setHeadless(true);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 
 
