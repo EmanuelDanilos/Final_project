@@ -24,11 +24,11 @@ public class AppTest
     public void LogInAndLogOut()
     {
         assertTrue( true );
-        System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
         ChromeDriver driver = new ChromeDriver(options);
-        //options.setHeadless(true);
+        options.setHeadless(true);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         final String userName = "mojtestowyuzytkownik@test.pl";
@@ -52,7 +52,7 @@ public class AppTest
         WebElement cart = driver.findElement(By.cssSelector("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b"));
         String trueCart = "Cart";
         Assert.assertEquals(cart.getText(), trueCart);
-        System.out.println("Test wykazał, że wskazane pole nazywa się: " + cart.getText() + " i jest zgodne z nazwą, która miała si ęwyświetlić czyli: " + trueCart);
+        System.out.println("\nTest wykazał, że wskazane pole nazywa się: " + cart.getText() + " i jest zgodne z nazwą, która miała si ęwyświetlić czyli: " + trueCart + "\n");
 
         WebElement log_out_button = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a"));
         log_out_button.click();
