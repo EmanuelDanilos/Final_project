@@ -27,8 +27,9 @@ public class AppTest
         //System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
-        ChromeDriver driver = new ChromeDriver(options);
         options.setHeadless(true);
+        ChromeDriver driver = new ChromeDriver(options);
+
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 
