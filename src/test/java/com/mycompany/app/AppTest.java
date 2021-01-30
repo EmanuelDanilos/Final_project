@@ -41,8 +41,8 @@ public class AppTest
 
         //System.setProperty("webdriver.chrome.driver","C:\\Users\\thepa\\Desktop\\Pax\\Selenium\\drivers2\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        ChromeDriver driver = new ChromeDriver(options);
         options.setHeadless(true);
+        ChromeDriver driver = new ChromeDriver(options);
 
         driver.get("http://automationpractice.com/");
         WebElement signInLabelButton = driver.findElement(By.linkText("Sign in"));
