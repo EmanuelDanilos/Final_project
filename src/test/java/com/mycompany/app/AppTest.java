@@ -17,9 +17,9 @@ public class AppTest
      */
     @Test
     public void userCanLogInAndLogOut() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:/Users/mmart/Desktop/SDA Tester/Github/Selenium_AutomationPractice/drivers/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:/Users/mmart/Desktop/SDA Tester/Github/Selenium_AutomationPractice/drivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        //options.setHeadless(true);
+        options.setHeadless(true);
         ChromeDriver driver = new ChromeDriver(options);
 
         final String username = "mojtestowyuzytkownik@test.pl";
