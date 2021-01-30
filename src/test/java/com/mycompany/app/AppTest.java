@@ -31,6 +31,8 @@ public class AppTest
         options.setHeadless(true);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+
+
         final String userName = "mojtestowyuzytkownik@test.pl";
         final String password = "test1";
 
@@ -40,7 +42,7 @@ public class AppTest
         signInButton.click();
 
 
-        WebElement login_input = driver.findElement(By.xpath("//*[@id=\'email\']"));
+        WebElement login_input = driver.findElement(By.xpath("//*[@id='email']"));
         login_input.sendKeys(userName);
 
         WebElement password_input = driver.findElement(By.cssSelector("#passwd"));
@@ -52,9 +54,9 @@ public class AppTest
         WebElement cart = driver.findElement(By.cssSelector("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b"));
         String trueCart = "Cart";
         Assert.assertEquals(cart.getText(), trueCart);
-        System.out.println("\nTest wykazał, że wskazane pole nazywa się: " + cart.getText() + " i jest zgodne z nazwą, która miała si ęwyświetlić czyli: " + trueCart + "\n");
+        System.out.println("\nTest wykazał, że wskazane pole nazywa się: " + cart.getText() + " i jest zgodne z nazwą, która miała się wyświetlić czyli: " + trueCart + "\n");
 
-        WebElement log_out_button = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a"));
+        WebElement log_out_button = driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[2]/a"));
         log_out_button.click();
         driver.quit();
         }
