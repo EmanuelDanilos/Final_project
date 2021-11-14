@@ -1,3 +1,4 @@
-# final_project
+# My_project
 
-Final project for automation testing. Test.
+My project for automation testing. 
+Test object: www.automationpractice.com
