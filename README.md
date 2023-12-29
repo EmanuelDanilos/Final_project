@@ -1,4 +1,4 @@
 # My_project
 
-My project for automation testing. 
+My automation testing project. 
 Test object: www.automationpractice.com
